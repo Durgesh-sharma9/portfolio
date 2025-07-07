@@ -92,37 +92,36 @@ function Midonebody() {
             </div>
           </div>
         </div>
-
-        
       </div>
       {/* ✅ Social Icons with Scroll-Based Slide Animation */}
-        <div
-          className={`fixed top-1/2 right-[4px] transform -translate-y-1/2 z-20 transition-all duration-500 ${
-            hideIcons
-              ? "translate-x-[100px] opacity-0"
-              : "translate-x-0 opacity-100"
-          }`}
-        >
-          <ul className="ml-auto mr-2 text-[#b0b2c3] space-y-6 sm:space-y-10 w-5 sm:w-7">
-            {icons.map((icon, i) => (
-              <li
-                key={i}
-                className="transition-transform duration-300 hover:scale-125 hover:text-white"
-              >
-                <a href={icon.href} target="_blank" rel="noopener noreferrer">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox={icon.viewBox}
-                    fill="currentColor"
-                    className="w-6 h-6 sm:w-7 sm:h-7"
-                  >
-                    <path d={icon.path} />
-                  </svg>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+      <div
+        className={`fixed top-1/2 right-[4px] transform -translate-y-1/2 z-20 transition-all duration-500 ${
+          hideIcons
+            ? "translate-x-[100px] opacity-0"
+            : "translate-x-0 opacity-100"
+        }`}
+      >
+        <ul className="ml-auto mr-2 text-[#b0b2c3] space-y-6 sm:space-y-10 w-5 sm:w-7">
+          {icons.map((icon, i) => (
+            <li
+              key={i}
+              className="transition-transform duration-300 hover:scale-125 hover:text-white"
+            >
+              <a href={icon.href} target="_blank" rel="noopener noreferrer">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox={icon.viewBox}
+                  fill="currentColor"
+                  className="w-6 h-6 sm:w-7 sm:h-7"
+                >
+                  <path d={icon.path} />
+                </svg>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <hello className="div">hello</hello>
     </>
   );
 }
@@ -156,3 +155,4 @@ const icons = [
 ];
 
 export default Midonebody;
+
