@@ -3,14 +3,11 @@ import { Typewriter } from "react-simple-typewriter";
 import "./font.css";
 
 function Midonebody() {
- 
-
-
   const [hideIcons, setHideIcons] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setHideIcons(window.scrollY > 50); // 👈 Customize scroll threshold here
+      setHideIcons(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -28,9 +25,10 @@ function Midonebody() {
             className="h-full object-contain pl-4"
           />
         </div>
+       
 
         {/* ✅ Foreground content */}
-        <div className="flex items-center justify-between h-full px-6 sm:px-10 md:px-20 relative z-10 ">
+        <div className="flex items-center justify-between h-full pl-6 sm:pl-10 md:pl-20 pr-8 sm:pr-10 md:pr-20 relative z-10">
           {/* ✅ Text content */}
           <div className="max-w-lg text-white space-y-3 pt-4 mt-6">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-[600] font-['spartan'] whitespace-nowrap">
@@ -56,6 +54,15 @@ function Midonebody() {
               />
             </span>
 
+            <div className=" md:hidden rounded-full p-2">
+              <img
+                src="/saatvik.webp"
+                alt="Durgesh Sharma"
+                className="h-[250px] lg:h-[300px] w-[250px] lg:w-[400px] object-cover rounded-full "
+              />
+            </div>
+            
+
             <p className="text-sm sm:text-base mt-2">
               I am a passionate front-end developer with strong expertise in
               React.js and Tailwind CSS. I have a solid foundation in HTML, CSS,
@@ -66,40 +73,39 @@ function Midonebody() {
 
             <div className="flex gap-4 mt-4">
               <button
-              onClick={()=>{
-
-              }}
+                onClick={() => {}}
                 className="transition-all duration-300 hover:scale-110 text-sm sm:text-base 
-                bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] 
-                py-2 px-4 sm:px-5 rounded font-extrabold text-white 
-                hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.4)]"
+                  bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] 
+                  py-2 px-4 sm:px-5 rounded font-extrabold text-white 
+                  hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.4)]"
               >
                 About Me
               </button>
               <button
                 className="transition-all duration-300 hover:scale-110 text-sm sm:text-base 
-                bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] 
-                py-2 px-4 sm:px-5 rounded font-extrabold text-white 
-                hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.4)]"
+                  bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] 
+                  py-2 px-4 sm:px-5 rounded font-extrabold text-white 
+                  hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.4)]"
               >
                 My Resume
               </button>
             </div>
           </div>
 
-          {/* ✅ Image */}
+          {/* ✅ Responsive Image (Only on md and above) */}
           <div className="hidden md:block -translate-x-1/3 group">
             <div className="rounded-full p-2 bg-white/5 transition-all duration-700 ease-in-out group-hover:shadow-[0_0_35px_8px_rgba(255,255,255,0.3)]">
               <img
                 src="/saatvik.webp"
                 alt="Durgesh Sharma"
-                className="h-[400px] w-[400px] object-cover rounded-full transition-transform duration-700 ease-in-out group-hover:scale-105"
+                className="h-[350px] lg:h-[400px] w-[350px] lg:w-[400px] object-cover rounded-full shadow-lg transition-transform duration-700 ease-in-out group-hover:scale-105"
               />
             </div>
           </div>
         </div>
       </div>
-      {/* ✅ Social Icons with Scroll-Based Slide Animation */}
+
+      {/* ✅ Social Icons - Scroll-based animation */}
       <div
         className={`fixed top-1/2 right-[4px] transform -translate-y-1/2 z-20 transition-all duration-500 ${
           hideIcons
@@ -127,7 +133,6 @@ function Midonebody() {
           ))}
         </ul>
       </div>
-      
     </>
   );
 }
@@ -161,4 +166,5 @@ const icons = [
 ];
 
 export default Midonebody;
+
 
