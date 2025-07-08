@@ -1,3 +1,4 @@
+import Aboutme from "./Aboutme"
 import Midonebody from "./Midonebody"
 import Skillsection from "./Skillsection"
 import Upbody from "./Upbody"
@@ -11,6 +12,7 @@ function Mainone() {
       <Upbody/>
       <Midonebody/>
       <Skillsection/>
+      
       
     </body>
  

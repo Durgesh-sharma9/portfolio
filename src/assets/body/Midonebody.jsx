@@ -3,6 +3,9 @@ import { Typewriter } from "react-simple-typewriter";
 import "./font.css";
 
 function Midonebody() {
+ 
+
+
   const [hideIcons, setHideIcons] = useState(false);
 
   useEffect(() => {
@@ -63,6 +66,9 @@ function Midonebody() {
 
             <div className="flex gap-4 mt-4">
               <button
+              onClick={()=>{
+
+              }}
                 className="transition-all duration-300 hover:scale-110 text-sm sm:text-base 
                 bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] 
                 py-2 px-4 sm:px-5 rounded font-extrabold text-white 
@@ -121,7 +127,7 @@ function Midonebody() {
           ))}
         </ul>
       </div>
-      <hello className="div">hello</hello>
+      
     </>
   );
 }
