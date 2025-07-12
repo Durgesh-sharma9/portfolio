@@ -16,21 +16,20 @@ function Midonebody() {
 
   return (
     <>
-      <div className="relative h-[79vh] overflow-hidden">
-        {/* ✅ Background DS logo */}
-        <div className="absolute left-0 top-0 h-full w-1/2 z-0 opacity-50 brightness-90">
+      <div className="relative  sm:h-[100dvh] md:h-[35em] overflow-y-auto sm:overflow-hidden pt-20 sm:pt-0">
+        {/* ✅ Background DS logo (hidden on small screens) */}
+        <div className="hidden sm:block absolute left-0 top-0 h-full w-1/2 z-0 opacity-50 brightness-90">
           <img
             src="/devlogo.png"
             alt="ds logo"
             className="h-full object-contain pl-4"
           />
         </div>
-       
 
         {/* ✅ Foreground content */}
-        <div className="flex items-center justify-between h-full pl-6 sm:pl-10 md:pl-20 pr-8 sm:pr-10 md:pr-20 relative z-10">
+        <div className="flex flex-col sm:flex-row items-center sm:items-center justify-between h-full px-4 sm:px-8 md:px-16 relative z-10">
           {/* ✅ Text content */}
-          <div className="max-w-lg text-white space-y-3 pt-4 mt-6">
+          <div className="max-w-lg text-white space-y-3 flex flex-col items-center sm:items-start text-center sm:text-left">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-[600] font-['spartan'] whitespace-nowrap">
               Durgesh Sharma
             </h1>
@@ -54,14 +53,14 @@ function Midonebody() {
               />
             </span>
 
-            <div className=" md:hidden rounded-full p-2">
+            {/* ✅ Mobile image only */}
+            <div className="md:hidden rounded-full p-2 flex justify-center">
               <img
                 src="/saatvik.webp"
                 alt="Durgesh Sharma"
-                className="h-[250px] lg:h-[300px] w-[250px] lg:w-[400px] object-cover rounded-full "
+                className="h-[250px] lg:h-[300px] w-[250px] lg:w-[400px] object-cover rounded-full"
               />
             </div>
-            
 
             <p className="text-sm sm:text-base mt-2">
               I am a passionate front-end developer with strong expertise in
@@ -71,9 +70,8 @@ function Midonebody() {
               C, C++, and Python, which complements my development skills.
             </p>
 
-            <div className="flex gap-4 mt-4">
+            <div className="flex gap-4 mt-4 justify-center sm:justify-start">
               <button
-                onClick={() => {}}
                 className="transition-all duration-300 hover:scale-110 text-sm sm:text-base 
                   bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] 
                   py-2 px-4 sm:px-5 rounded font-extrabold text-white 
@@ -92,7 +90,7 @@ function Midonebody() {
             </div>
           </div>
 
-          {/* ✅ Responsive Image (Only on md and above) */}
+          {/* ✅ Desktop image only */}
           <div className="hidden md:block -translate-x-1/3 group">
             <div className="rounded-full p-2 bg-white/5 transition-all duration-700 ease-in-out group-hover:shadow-[0_0_35px_8px_rgba(255,255,255,0.3)]">
               <img
@@ -105,9 +103,9 @@ function Midonebody() {
         </div>
       </div>
 
-      {/* ✅ Social Icons - Scroll-based animation */}
+      {/* ✅ Social Icons (hidden below sm) */}
       <div
-        className={`fixed top-1/2 right-[4px] transform -translate-y-1/2 z-20 transition-all duration-500 ${
+        className={`hidden sm:block fixed top-1/2 right-[4px] transform -translate-y-1/2 z-20 transition-all duration-500 ${
           hideIcons
             ? "translate-x-[100px] opacity-0"
             : "translate-x-0 opacity-100"
@@ -166,5 +164,3 @@ const icons = [
 ];
 
 export default Midonebody;
-
-
