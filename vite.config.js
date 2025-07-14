@@ -9,10 +9,12 @@ export default defineConfig({
   plugins: [react() ,tailwindcss(),svgr()
     
   ],
-  server: {
-    host: '0.0.0.0',
-    port: 3000
+    server: {
+    host: true,       // Allow access via local IP (0.0.0.0)
+    port: 5173,       // Or any port you prefer
+    open: false       // Optional: prevent auto-opening browser
   }
+ 
 
 })
 
